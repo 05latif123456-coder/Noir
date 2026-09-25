@@ -212,7 +212,10 @@ em { font-style: italic; }
 .image-story::after { content: ''; position: absolute; inset: 0; background: linear-gradient(90deg, rgba(16,18,17,.78), transparent 70%); }
 .image-story-overlay { position: absolute; z-index: 1; left: max(2rem, calc((100vw - 1280px) / 2)); bottom: 4rem; max-width: 28rem; }
 .image-story-overlay p { margin: 1.3rem 0 1.8rem; font: 400 clamp(2rem, 3.6vw, 3.8rem)/.98 var(--serif); }
-.text-button.light { color: var(--on-image); border-color: var(--copper); }
+.text-button.light { color: var(--on-image); border: 1px solid var(--on-image-line); border-bottom-color: var(--copper); background: rgba(16,18,17,.34); padding: .7rem 1.15rem .65rem; backdrop-filter: blur(7px); -webkit-backdrop-filter: blur(7px); }
+.text-button.light:hover { background: rgba(16,18,17,.55); color: var(--candle); }
+.text-button.light span { color: var(--copper); }
+.text-button.light:hover span { color: var(--copper); }
 .gallery-section { background: #101211; color: var(--on-image); }
 .gallery-note { color: var(--on-image-soft); font: italic 1.1rem/1.25 var(--serif); text-align: right; }
 .gallery-grid { max-width: 1100px; margin: 0 auto; display: grid; grid-template-columns: 1.08fr .78fr .72fr; grid-template-rows: 20rem 16rem 13rem; gap: 1rem; }
