@@ -1,4 +1,4 @@
-import type { GalleryImage, MenuCategory, Mood } from '../types'
+import type { ChefNote, GalleryImage, MarketMemoryStep, MenuCategory, Mood, TableView } from '../types'
 
 export const site = {
   name: 'NOIR',
@@ -115,5 +115,38 @@ export const gallery: GalleryImage[] = [
   { src: '/images/06.webp', alt: 'Chef working in a softly lit professional kitchen', label: 'The gesture', position: 'center', className: 'gallery-medium' },
   { src: '/images/07.webp', alt: 'Darkly styled contemporary dish with sauce and herbs', label: 'The detail', position: 'center', className: 'gallery-small' },
 ]
+
+export const marketMemory: MarketMemoryStep[] = [
+  { number: '01', label: 'The market', title: 'Before the plate has a name', description: 'A cold morning selection: sea greens, dark roots, bruised citrus and the first quiet decision of the day.', src: '/images/26.webp', alt: 'Seasonal French ingredients arranged on dark stone before service' },
+  { number: '02', label: 'The instinct', title: 'What the hand notices', description: 'The chef edits the market with touch, temperature and restraint, keeping only what the evening can carry.', src: '/images/27.webp', alt: 'Chef hand selecting a delicate seasonal ingredient in a dark kitchen' },
+  { number: '03', label: 'The heat', title: 'A brief change of state', description: 'A flame, a pan, a burnt edge. The ingredient crosses from raw clarity into something warmer and less certain.', src: '/images/28.webp', alt: 'Seasonal ingredient meeting low flame in a refined restaurant kitchen' },
+  { number: '04', label: 'The gesture', title: 'Nothing placed by accident', description: 'Sauce follows the curve of the plate. One leaf closes the composition. The smallest movement becomes a signature.', src: '/images/29.webp', alt: 'Chef finishing a contemporary French dish with a precise final gesture' },
+  { number: '05', label: 'The plate', title: 'A memory with an edge', description: 'The finished dish keeps a trace of the market while becoming unmistakably NOIR: mineral, warm and quietly strange.', src: '/images/30.webp', alt: 'Contemporary French tasting-menu dish on a dark ceramic plate' },
+  { number: '06', label: 'The room', title: 'Where the story lands', description: 'The plate leaves the pass and enters the low light, where conversation, wine and time complete it.', src: '/images/31.webp', alt: 'Finished dish arriving at a candlelit contemporary Paris dining table' },
+]
+
+export const tableViews: TableView[] = [
+  { id: 'A', name: 'Table A', view: 'The low window', detail: 'A narrow view of Paris after dark, with the room reflected faintly in the glass.', atmosphere: 'Quiet / mineral' },
+  { id: 'B', name: 'Table B', view: 'The pass', detail: 'A glimpse of the final gestures from the kitchen, close enough to hear the plates arrive.', atmosphere: 'Focused / warm' },
+  { id: 'C', name: 'Table C', view: 'The stone wall', detail: 'The most private corner: charcoal stone, a small candle, and the longest pause between courses.', atmosphere: 'Deep / nocturne' },
+  { id: 'D', name: 'Table D', view: 'The boulevard', detail: 'A front-row seat to the city’s movement, softened by linen, glass and low amber light.', atmosphere: 'Open / cinematic' },
+]
+
+export const chefNotes: ChefNote[] = [
+  { text: 'The best ingredient is attention.', signature: 'Élise Moreau', time: '21:47 — between courses' },
+  { text: 'A dish should leave before it explains itself.', signature: 'Élise Moreau', time: '22:16 — at the pass' },
+  { text: 'We cook for the moment the room becomes quieter.', signature: 'Élise Moreau', time: '23:08 — late seating' },
+]
+
+export const windowMode = {
+  title: 'Paris, from the other side of the glass.',
+  description: 'A small pause between courses. Stay here for a moment and let the city move without you.',
+  preview: '/images/32.webp',
+  scenes: [
+    { src: '/images/32.webp', alt: 'Rain-dark Paris window seen from a quiet restaurant at night' },
+    { src: '/images/33.webp', alt: 'Candle reflection and distant Paris lights on restaurant glass' },
+    { src: '/images/34.webp', alt: 'Soft interior reflection layered over a blurred Paris boulevard at night' },
+  ],
+}
 
 export const moodItems = (mood: Mood) => menuCategories.flatMap((category) => category.items.filter((item) => item.mood === mood)).slice(0, 3)

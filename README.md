@@ -42,6 +42,8 @@ The Night Index is a three-state sensory menu explorer: Ember, Mineral, and Noct
 
 The first-page design direction is documented in [`NOIR-HOME-DESIGN-REPORT.md`](./NOIR-HOME-DESIGN-REPORT.md). It describes the Home experience only: the cinematic hero, editorial composition, Night Index, motion language, responsive behavior, and the intended visual rules for carrying the direction into another project.
 
+The newer Home experiences are documented separately: [`NOIR-MARKET-MEMORY-ASSET-REPORT.md`](./NOIR-MARKET-MEMORY-ASSET-REPORT.md) lists the generated image workflow for From Market to Memory, [`NOIR-WINDOW-MODE-ASSET-REPORT.md`](./NOIR-WINDOW-MODE-ASSET-REPORT.md) lists the Window Mode images, and [`NOIR-TABLE-09-REPORT.md`](./NOIR-TABLE-09-REPORT.md) explains the fictional table views.
+
 The site also includes an opt-in soundtrack playlist fixed to the lower-left corner. It never autoplays: visitors choose whether to play or pause the local tracks in `public/audio/`, and can move backward or forward with the adjacent controls. The current playlist contains `sway.mp3`, `blue-suit-blues.mp3`, and `parisian-cafe.mp3`; add a fourth track by appending one data object to `site.soundtrack` in `src/data/site.ts`.
 
 The header also includes a persistent dark/light mode toggle. Desktop uses a moon/sun icon; mobile expands the control into a labeled pill. The preference is saved locally in the browser.

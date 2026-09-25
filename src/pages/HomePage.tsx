@@ -4,6 +4,12 @@ import type { Mood } from '../types'
 import { ArrowDown, ArrowUpRight } from '../components/Icons'
 import { Reveal } from '../components/Reveal'
 import { LocationMap } from '../components/LocationMap'
+import { CandleCursor } from '../components/CandleCursor'
+import { ChefMessage } from '../components/ChefMessage'
+import { MarketMemory } from '../components/MarketMemory'
+import { Table09 } from '../components/Table09'
+import { UnwrittenMenu } from '../components/UnwrittenMenu'
+import { WindowMode } from '../components/WindowMode'
 
 function HomeDishImage({ src, name, className = '' }: { src?: string; name: string; className?: string }) {
   if (!src) return null
@@ -14,7 +20,8 @@ export function HomePage({ navigate }: { navigate: (href: string) => void }) {
   const [mood, setMood] = useState<Mood>('ember')
   const selected = moods[mood]
   return <>
-    <section className="hero" aria-labelledby="hero-title">
+    <CandleCursor />
+    <section className="hero" aria-labelledby="hero-title" data-candle-zone>
       <div className="hero-image" role="img" aria-label="Atmospheric fallback image for the NOIR opening" />
       <video className="hero-video" autoPlay muted loop playsInline preload="metadata" aria-hidden="true" onError={(event) => { event.currentTarget.style.display = 'none' }}>
         <source src="/video/noir-entry.mp4" type="video/mp4" />
@@ -56,10 +63,17 @@ export function HomePage({ navigate }: { navigate: (href: string) => void }) {
       <div className="featured-menu">{menuCategories[1].items.slice(0, 3).map((item, index) => <Reveal key={item.name} delay={index * 80}><article className="featured-item"><span className="featured-number">0{index + 1}</span><HomeDishImage src={item.image} name={item.name} className="featured-dish-image" /><div><h3>{item.name}</h3><p>{item.description}</p></div><span className="menu-price">€{item.price}</span></article></Reveal>)}</div>
     </section>
 
-    <section className="image-story">
+    <UnwrittenMenu items={menuCategories[1].items.slice(0, 3)} />
+    <MarketMemory />
+    <Table09 />
+
+    <section className="image-story" data-candle-zone>
       <div className="image-story-image" role="img" aria-label="Chef plating a dish in the NOIR kitchen" />
       <div className="image-story-overlay"><span className="eyebrow">The kitchen, 21:47</span><p>Every plate is a conversation between what the market gives us and what the night asks for.</p><a className="text-button light" href="/about" onClick={(event) => { event.preventDefault(); navigate('/about') }}>Meet the people behind NOIR <span>↗</span></a></div>
     </section>
+
+    <ChefMessage />
+    <WindowMode />
 
     <section className="gallery-section section-pad">
       <div className="section-index">04 <span /></div>

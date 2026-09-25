@@ -28,7 +28,7 @@ Build and document a production-quality, original NOIR contemporary French fine-
 - [complete] Phase 20 — Install and verify the generated NOIR hero video
 - [complete] Phase 21 — Add detailed Menu dish image prompts to the asset report
 - [complete] Phase 22 — Place numbered dish images into the Menu items
-- [complete] Phase 23 — Add local dish imagery to the Home page menu moments
+- [complete] Phase 23 — Add new immersive Home experiences and local image slots
 
 ## Decisions Made
 
@@ -57,4 +57,4 @@ Build and document a production-quality, original NOIR contemporary French fine-
 
 ## Next Step
 
-Home dish imagery is now connected to the shared Menu data. The production build and local asset smoke checks passed; the remaining action is to commit and push the complete working tree.
+The requested Home experiences, local image slots, reports, transitions, and interactions are implemented. The production build and local asset smoke checks passed; the remaining action is to commit and push the complete working tree.

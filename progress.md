@@ -51,3 +51,5 @@
 - New Home image pass started: identified that both the featured menu and Night Index on the homepage were still text-only despite the shared menu data already carrying local image paths.
 - Added a shared `HomeDishImage` renderer to HomePage: the featured Plats rows now show images 15–17, and Night Index suggestions show the matching image for every mood-filtered dish. The treatment preserves the editorial rows, includes lazy loading, local missing-image fallback, and image copy deterrents.
 - Production build passed and `/` plus the sampled local dish assets returned HTTP 200 with `image/webp` content types.
+- Added the requested Home experiences: Unwritten Menu reveal rows, fictional Table 09 random table views, From Market to Memory with image slots 26–31, Window Mode with image slots 32–34, rotating chef notes, candle cursor zones, exit whisper overlay, and the NOIR page transition loader.
+- Added `NOIR-MARKET-MEMORY-ASSET-REPORT.md`, `NOIR-WINDOW-MODE-ASSET-REPORT.md`, and `NOIR-TABLE-09-REPORT.md` with generation prompts, paths, and fictional table sightlines. Production build and route smoke tests passed.

@@ -1,11 +1,28 @@
-import { useEffect, useState, type ReactNode } from 'react'
+import { useEffect, useRef, useState, type MouseEvent, type ReactNode } from 'react'
 import { site } from '../data/site'
 import { ArrowUpRight, CloseIcon, MenuIcon } from './Icons'
 import { MusicControl } from './MusicControl'
 import { ThemeToggle } from './ThemeToggle'
 
+function PageTransition({ path }: { path: string }) {
+  const previousPath = useRef(path)
+  const [visible, setVisible] = useState(false)
+
+  useEffect(() => {
+    if (previousPath.current === path) return
+    previousPath.current = path
+    setVisible(true)
+    const timeout = window.setTimeout(() => setVisible(false), 620)
+    return () => window.clearTimeout(timeout)
+  }, [path])
+
+  if (!visible) return null
+  return <div className="page-transition" role="status" aria-live="polite"><span className="page-transition-mark">NOIR<span>.</span></span><span className="page-transition-label">Entering the room</span></div>
+}
+
 export function SiteShell({ children, path }: { children: ReactNode; path: string }) {
   const [open, setOpen] = useState(false)
+  const [leaving, setLeaving] = useState(false)
 
   useEffect(() => setOpen(false), [path])
   useEffect(() => {
@@ -17,6 +34,12 @@ export function SiteShell({ children, path }: { children: ReactNode; path: strin
     if (href.startsWith('http')) return
     window.history.pushState({}, '', href)
     window.dispatchEvent(new PopStateEvent('popstate'))
+  }
+
+  const leaveSite = (event: MouseEvent<HTMLAnchorElement>, href: string) => {
+    event.preventDefault()
+    setLeaving(true)
+    window.setTimeout(() => { window.location.href = href }, 720)
   }
 
   return <div className="app-shell">
@@ -42,12 +65,14 @@ export function SiteShell({ children, path }: { children: ReactNode; path: strin
       </div>
     </header>
     <main id="main-content">{children}</main>
-    <Footer navigate={navigate} />
+    <Footer navigate={navigate} onLeave={leaveSite} />
     <MusicControl />
+    <PageTransition path={path} />
+    {leaving && <div className="exit-overlay" role="status" aria-live="polite"><span className="page-transition-mark">NOIR<span>.</span></span><p>Until the next evening.</p></div>}
   </div>
 }
 
-function Footer({ navigate }: { navigate: (href: string) => void }) {
+function Footer({ navigate, onLeave }: { navigate: (href: string) => void; onLeave: (event: MouseEvent<HTMLAnchorElement>, href: string) => void }) {
   return <footer className="site-footer">
     <div className="footer-top">
       <a className="wordmark footer-mark" href="/" onClick={(event) => { event.preventDefault(); navigate('/') }}>NOIR<span className="wordmark-dot">.</span></a>
@@ -57,7 +82,7 @@ function Footer({ navigate }: { navigate: (href: string) => void }) {
     <div className="footer-bottom">
       <span>{site.address.replace('\n', ' · ')}</span>
       <span>© NOIR 2026</span>
-      <div className="footer-links"><a href="https://www.instagram.com/">Instagram</a><a href="/about" onClick={(event) => { event.preventDefault(); navigate('/about') }}>Journal</a></div>
+      <div className="footer-links"><a href="https://www.instagram.com/" onClick={(event) => onLeave(event, 'https://www.instagram.com/')}>Instagram</a><a href="/about" onClick={(event) => { event.preventDefault(); navigate('/about') }}>Journal</a><a href="https://www.instagram.com/" onClick={(event) => onLeave(event, 'https://www.instagram.com/')}>Leave the room <ArrowUpRight /></a></div>
     </div>
   </footer>
 }
