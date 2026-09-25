@@ -74,6 +74,12 @@
 - `MenuList` previously rendered only text and price. The correct placement is a data-driven `image` field on each Menu item, mapped in order: 11–14 Entrées, 15–18 Plats, 19–21 Desserts, 22 Fromages, and 23–25 Boissons.
 - The final implementation keeps this mapping in `src/data/site.ts`, so replacing any generated file in `public/images/` updates the matching item without changing component code.
 
+## New generated image installation
+
+- The supplied `imges` folder contains exactly nine files, numbered 26 through 34.
+- They were converted from JFIF to WebP and installed at `public/images/26.webp` through `public/images/34.webp`, matching the Market Memory and Window Mode data paths exactly.
+- The optimized output files were verified with Pillow and served successfully by the local Vite server as `image/webp`.
+
 ## Home dish imagery review
 
 - `HomePage.tsx` already receives menu records containing `image` paths, but the `featured-menu` section rendered only the item number, name, description, and price.

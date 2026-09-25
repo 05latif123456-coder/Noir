@@ -56,11 +56,11 @@ The homepage reused the menu data but rendered its featured dishes and Night Ind
 
 ### New Home experiences
 
-Added the requested creative interactions as separate, data-driven components: Unwritten Menu reveals, fictional Table 09 sightlines with random selection, From Market to Memory, Window Mode, rotating chef notes, a pointer-only candle glow, a short NOIR page transition, and a controlled external-exit overlay. New future image slots intentionally use local paths with CSS fallbacks until the generated files are supplied. Build and route smoke tests passed.
+Added the requested creative interactions as separate, data-driven components: Unwritten Menu reveals, fictional Table 09 sightlines with random selection, From Market to Memory, Window Mode, rotating chef notes, a pointer-only candle glow, a short NOIR page transition, and a controlled external-exit overlay. Installed the supplied generated images for slots 26–34 as local WebP assets; CSS fallbacks remain only as resilience if a file is later removed. Build and route smoke tests passed.
 
 ## Remaining production notes
 
-- Image slots are local and predictable (`/images/01.webp` through `/images/34.webp`). The newly requested slots 26–31 and 32–34 are documented separately and currently use local CSS fallbacks until their generated files are supplied.
+- Image slots are local and predictable (`/images/01.webp` through `/images/34.webp`). The newly requested slots 26–31 and 32–34 are documented separately and are now populated by the supplied generated WebP files.
 - The app intentionally uses client-side routing for a dependency-light prototype; SSR or pre-rendered routes would improve crawlability and first response in production.
 - Browser console and screen-reader testing should be run in a full browser matrix before launch; the available environment provided build and HTTP smoke-test coverage, not an automated visual browser runner.
 - No unnecessary UI, motion, or icon dependencies are present. Leaflet is isolated to the location map; the production bundle remains a single application chunk plus CSS.

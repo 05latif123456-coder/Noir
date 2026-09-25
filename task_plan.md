@@ -57,4 +57,4 @@ Build and document a production-quality, original NOIR contemporary French fine-
 
 ## Next Step
 
-The requested Home experiences, local image slots, reports, transitions, and interactions are implemented. The production build and local asset smoke checks passed; the remaining action is to commit and push the complete working tree.
+The requested Home experiences, local image slots, reports, transitions, and interactions are implemented. The supplied images 26–34 are installed and verified; the remaining action is to commit and push the complete working tree.

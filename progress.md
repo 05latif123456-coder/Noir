@@ -53,3 +53,4 @@
 - Production build passed and `/` plus the sampled local dish assets returned HTTP 200 with `image/webp` content types.
 - Added the requested Home experiences: Unwritten Menu reveal rows, fictional Table 09 random table views, From Market to Memory with image slots 26–31, Window Mode with image slots 32–34, rotating chef notes, candle cursor zones, exit whisper overlay, and the NOIR page transition loader.
 - Added `NOIR-MARKET-MEMORY-ASSET-REPORT.md`, `NOIR-WINDOW-MODE-ASSET-REPORT.md`, and `NOIR-TABLE-09-REPORT.md` with generation prompts, paths, and fictional table sightlines. Production build and route smoke tests passed.
+- Installed the supplied `imges/26.jfif`–`imges/34.jfif` set as optimized local WebP assets at `/images/26.webp`–`/images/34.webp`; all nine files verify as valid WebP and return HTTP 200.
