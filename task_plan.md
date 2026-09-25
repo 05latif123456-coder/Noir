@@ -29,6 +29,8 @@ Build and document a production-quality, original NOIR contemporary French fine-
 - [complete] Phase 21 — Add detailed Menu dish image prompts to the asset report
 - [complete] Phase 22 — Place numbered dish images into the Menu items
 - [complete] Phase 23 — Add new immersive Home experiences and local image slots
+- [complete] Phase 24 — Audit and repair light/dark theme contrast across all surfaces
+- [complete] Phase 25 — Refine Table 09 map contrast and mobile layout
 
 ## Decisions Made
 
@@ -57,4 +59,4 @@ Build and document a production-quality, original NOIR contemporary French fine-
 
 ## Next Step
 
-The requested Home experiences, local image slots, reports, transitions, and interactions are implemented. The supplied images 26–34 are installed and verified; the remaining action is to commit and push the complete working tree.
+Table 09 now has stable contrast in both themes, clearer rounded controls, and a smaller centered mobile map. Production build, route smoke tests, and whitespace checks passed; the verified working tree is ready to commit and push.

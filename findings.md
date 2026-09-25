@@ -85,3 +85,15 @@
 - `HomePage.tsx` already receives menu records containing `image` paths, but the `featured-menu` section rendered only the item number, name, description, and price.
 - The Night Index also rendered its mood-filtered dishes as text-only rows, even though the filtered `MenuItem` records already carry the matching local image paths.
 - The Home fix should reuse those data-driven paths in both moments: compact editorial thumbnails in the featured menu and restrained thumbnails in the atmosphere suggestions. No new assets or duplicate image mapping is needed.
+
+## Theme contrast audit
+
+- The supplied screenshot shows `The Unwritten Menu` in light mode with a light `--slate` background while its text remains the fixed image-overlay color `--on-image` (cream), creating very low contrast.
+- The root light theme intentionally swaps `--ink`, `--bone`, and `--slate` for surface inversion, but fixed image-style sections must not use those swapped surface tokens for their backgrounds when their copy remains on-image.
+- The same pattern can affect `Night Index`, `Gallery`, and any new dark atmospheric section. Light-theme overrides are also needed for muted copy and form borders sitting on inverted dark surfaces such as Menu, Market Memory, and Reservation.
+
+## Table 09 map review
+
+- The Table 09 map is a CSS-led illustration rather than a geographic map. Its room lines and button borders were too faint on the light map surface, and the selected button inherited `var(--bone)`, which changes meaning between themes.
+- The map now uses explicit dark architectural line tokens and a fixed light selected-label color so its controls remain legible in both light and dark modes.
+- The map controls now have softer rounded-square geometry, clearer focus/hover states, and less visual weight on mobile. The mobile map is centered, capped in width, and given a shorter aspect ratio so the four table choices do not feel crowded.

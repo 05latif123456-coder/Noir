@@ -58,6 +58,14 @@ The homepage reused the menu data but rendered its featured dishes and Night Ind
 
 Added the requested creative interactions as separate, data-driven components: Unwritten Menu reveals, fictional Table 09 sightlines with random selection, From Market to Memory, Window Mode, rotating chef notes, a pointer-only candle glow, a short NOIR page transition, and a controlled external-exit overlay. Installed the supplied generated images for slots 26–34 as local WebP assets; CSS fallbacks remain only as resilience if a file is later removed. Build and route smoke tests passed.
 
+### Light/dark theme contrast audit
+
+The supplied light-mode screenshot exposed cream overlay text sitting on an inverted light `--slate` surface in Unwritten Menu. Repaired the token leakage by stabilizing dark atmospheric surfaces for Unwritten Menu, Night Index, and Gallery, fixing Table 09’s fixed light surface, and adding theme-aware muted copy and borders for Menu, Market Memory, Editorial, and Reservation sections. The production build and all route smoke tests passed after the correction.
+
+### Table 09 map polish
+
+The Table 09 illustration had low-contrast room lines and borders on its light surface, while the active label inherited a theme-dependent color. Replaced those with explicit architectural line colors, a stable active-state label color, rounded-square controls, stronger focus states, and a restrained shadow treatment. On mobile, capped the map width, reduced its height and control size, centered it, and aligned the detail copy to reduce visual crowding. The production build and route smoke tests passed after this correction.
+
 ## Remaining production notes
 
 - Image slots are local and predictable (`/images/01.webp` through `/images/34.webp`). The newly requested slots 26–31 and 32–34 are documented separately and are now populated by the supplied generated WebP files.

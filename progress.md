@@ -54,3 +54,7 @@
 - Added the requested Home experiences: Unwritten Menu reveal rows, fictional Table 09 random table views, From Market to Memory with image slots 26–31, Window Mode with image slots 32–34, rotating chef notes, candle cursor zones, exit whisper overlay, and the NOIR page transition loader.
 - Added `NOIR-MARKET-MEMORY-ASSET-REPORT.md`, `NOIR-WINDOW-MODE-ASSET-REPORT.md`, and `NOIR-TABLE-09-REPORT.md` with generation prompts, paths, and fictional table sightlines. Production build and route smoke tests passed.
 - Installed the supplied `imges/26.jfif`–`imges/34.jfif` set as optimized local WebP assets at `/images/26.webp`–`/images/34.webp`; all nine files verify as valid WebP and return HTTP 200.
+- Theme contrast audit: corrected light-mode leakage where `--slate` surfaces were paired with fixed cream overlay text, especially in Unwritten Menu. Stabilized Night Index and Gallery dark surfaces, repaired Table 09 controls, and added light-theme muted text/border overrides for Menu, Market Memory, Editorial, and Reservation surfaces.
+- Production build passed after the theme audit; `/`, `/menu`, `/about`, and `/reserve` all returned HTTP 200.
+- Table 09 contrast/mobile pass started: the attached light-mode screenshot showed overly faint map lines and controls whose colors were coupled to the global theme tokens.
+- Table 09 contrast/mobile pass complete: explicit map line colors, stable button states, rounded controls, and a smaller centered mobile composition are now in place; build and route smoke tests passed.
