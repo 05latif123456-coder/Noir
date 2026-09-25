@@ -340,19 +340,33 @@ em { font-style: italic; }
 .reservation-form { border-top: 1px solid rgba(16,18,17,.22); }
 .form-heading { display: flex; justify-content: space-between; align-items: baseline; padding: 1.3rem 0 2.5rem; gap: 1rem; }
 .form-heading p { margin: 0; font: 1.25rem var(--serif); }
-.form-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; }
-.form-field { display: flex; flex-direction: column; gap: .6rem; }
+.form-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1.9rem 2.2rem; }
+.form-field { display: flex; flex-direction: column; gap: .7rem; }
 .form-field span { font: .62rem var(--mono); text-transform: uppercase; letter-spacing: .1em; color: #69716b; }
 .form-field b { color: var(--copper); font-weight: 400; margin-left: .2rem; }
-.form-field input, .form-field select, .form-field textarea { width: 100%; appearance: none; resize: vertical; border: 0; border-bottom: 1px solid rgba(16,18,17,.27); border-radius: 0; padding: .2rem 0 .85rem; color: var(--ink); background: transparent; outline: none; font-size: .82rem; }
-.form-field input::placeholder, .form-field textarea::placeholder { color: #9a9c95; }
-.form-field input:focus, .form-field select:focus, .form-field textarea:focus { border-color: var(--copper); box-shadow: 0 1px 0 var(--copper); }
+.form-field input, .form-field select, .form-field textarea { width: 100%; appearance: none; resize: vertical; border: 0; border-bottom: 1px solid rgba(16,18,17,.27); border-radius: 0; padding: .2rem 0 .85rem; color: var(--ink); background: linear-gradient(var(--copper), var(--copper)) no-repeat left bottom / 0 1px; outline: none; font-size: .82rem; transition: background-size .5s cubic-bezier(.2,.75,.25,1), border-color .3s ease; }
+.form-field input:focus, .form-field select:focus, .form-field textarea:focus { border-color: rgba(16,18,17,.27); background-size: 100% 1px; }
+.form-field input[type='date'] { color-scheme: light; }
+.form-stepper { display: inline-flex; align-items: center; gap: .3rem; width: fit-content; border: 1px solid rgba(16,18,17,.32); border-radius: 999px; padding: .22rem .3rem; }
+.form-stepper button { display: grid; place-items: center; width: 1.75rem; height: 1.75rem; padding: 0; border: 0; border-radius: 50%; background: transparent; color: var(--ink); font: .95rem var(--mono); transition: background .25s ease, color .25s ease, transform .25s ease; }
+.form-stepper button:hover:not(:disabled) { background: var(--copper); color: #f6efe5; }
+.form-stepper button:active:not(:disabled) { transform: scale(.9); }
+.form-stepper button:disabled { opacity: .32; cursor: not-allowed; }
+.form-stepper output { min-width: 5.6rem; text-align: center; font: .66rem var(--mono); letter-spacing: .1em; text-transform: uppercase; }
+.form-chips { display: flex; flex-wrap: wrap; gap: .5rem; }
+.form-chip { appearance: none; border: 1px solid rgba(16,18,17,.32); border-radius: 999px; background: transparent; color: var(--ink); font: .62rem var(--mono); letter-spacing: .08em; padding: .52rem .85rem; transition: border-color .25s ease, background .25s ease, color .25s ease, transform .25s ease; }
+.form-chip:hover { border-color: var(--copper); transform: translateY(-1px); }
+.form-chip.is-selected { background: var(--copper); border-color: var(--copper); color: #f6efe5; }
 .form-field-wide { grid-column: 1 / -1; }
-.form-error { margin: 1.5rem 0 0; color: #8f3f31; font: .72rem var(--mono); line-height: 1.5; }
-.form-foot { display: flex; justify-content: space-between; align-items: end; gap: 2rem; margin-top: 3rem; }
+.form-error { margin: 1.75rem 0 0; color: #8f3f31; font: .72rem var(--mono); line-height: 1.5; border-left: 2px solid #8f3f31; padding: .55rem .9rem; background: rgba(143,63,49,.07); }
+.form-foot { display: flex; justify-content: space-between; align-items: end; gap: 2rem; margin-top: 3rem; border-top: 1px solid rgba(16,18,17,.14); padding-top: 1.7rem; }
 .form-foot p { max-width: 16rem; margin: 0; color: #69716b; font-size: .68rem; line-height: 1.6; }
-.reservation-form .copper-button { white-space: nowrap; }
+.reservation-form .copper-button { white-space: nowrap; transition: background .3s ease, border-color .3s ease, color .3s ease, transform .3s ease; }
+.reservation-form .copper-button span { display: inline-block; transition: transform .3s ease; }
+.reservation-form .copper-button:not(:disabled):hover { transform: translateY(-1px); }
+.reservation-form .copper-button:not(:disabled):hover span { transform: translate(.14rem, -.14rem); }
 .reservation-form .copper-button:disabled { cursor: progress; opacity: .6; }
+.reservation-success .success-mark { display: grid; place-items: center; width: 3.2rem; height: 3.2rem; border: 1px solid var(--copper); border-radius: 50%; color: var(--copper); font-size: 1.05rem; margin-bottom: 1.5rem; }
 .reservation-success { min-height: 35rem; display: flex; flex-direction: column; align-items: flex-start; justify-content: center; }
 .success-mark { color: var(--copper); font-size: 2rem; margin-bottom: 2rem; }
 .reservation-success h2 { margin: 1rem 0 1.5rem; font: 400 clamp(3rem, 5vw, 5rem)/.9 var(--serif); }
@@ -420,6 +434,10 @@ body[data-theme='light'] .reservation-form { border-color: rgba(233,228,218,.2);
 body[data-theme='light'] .form-field input,
 body[data-theme='light'] .form-field select,
 body[data-theme='light'] .form-field textarea { border-bottom-color: rgba(233,228,218,.3); }
+body[data-theme='light'] .form-field input[type='date'] { color-scheme: dark; }
+body[data-theme='light'] .form-stepper { border-color: rgba(233,228,218,.38); }
+body[data-theme='light'] .form-chip { border-color: rgba(233,228,218,.38); }
+body[data-theme='light'] .form-foot { border-top-color: rgba(233,228,218,.18); }
 @media (max-width: 800px) {
   .section-pad { padding: 7.5rem 1.25rem; }
   .night-index { padding: 0; }

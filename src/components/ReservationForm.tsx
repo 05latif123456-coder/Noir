@@ -5,6 +5,7 @@ type FormState = 'idle' | 'loading' | 'success' | 'error'
 type FormValues = { name: string; email: string; phone: string; guests: string; date: string; time: string; message: string }
 
 const initialValues: FormValues = { name: '', email: '', phone: '', guests: '2', date: '', time: '', message: '' }
+const timeSlots = ['19:00', '19:30', '20:00', '20:30', '21:00', '21:30', '22:00']
 
 export function ReservationForm() {
   const [values, setValues] = useState(initialValues)
@@ -12,6 +13,8 @@ export function ReservationForm() {
   const [error, setError] = useState('')
 
   const update = (field: keyof FormValues, value: string) => setValues((current) => ({ ...current, [field]: value }))
+  const guests = Math.max(1, Math.min(8, Number(values.guests) || 2))
+  const setGuests = (next: number) => update('guests', String(next))
 
   const submit = (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault()
@@ -50,9 +53,19 @@ export function ReservationForm() {
       <Field label="Name" id="name" required><input id="name" name="name" autoComplete="name" value={values.name} onChange={(event) => update('name', event.target.value)} placeholder="Your name" required /></Field>
       <Field label="Email" id="email" required><input id="email" name="email" autoComplete="email" type="email" value={values.email} onChange={(event) => update('email', event.target.value)} placeholder="you@example.com" required /></Field>
       <Field label="Phone" id="phone" required><input id="phone" name="phone" autoComplete="tel" type="tel" value={values.phone} onChange={(event) => update('phone', event.target.value)} placeholder="+33 6 00 00 00 00" required /></Field>
-      <Field label="Guests" id="guests" required><select id="guests" name="guests" value={values.guests} onChange={(event) => update('guests', event.target.value)}>{[1, 2, 3, 4, 5, 6, 7, 8].map((number) => <option key={number} value={number}>{number} {number === 1 ? 'guest' : 'guests'}</option>)}</select></Field>
+      <Field label="Guests" id="guests" group>
+        <div className="form-stepper">
+          <button type="button" aria-label="One guest fewer" disabled={guests <= 1} onClick={() => setGuests(guests - 1)}>−</button>
+          <output aria-live="polite">{guests} {guests === 1 ? 'guest' : 'guests'}</output>
+          <button type="button" aria-label="One guest more" disabled={guests >= 8} onClick={() => setGuests(guests + 1)}>+</button>
+        </div>
+      </Field>
       <Field label="Date" id="date" required><input id="date" name="date" type="date" min={new Date().toISOString().split('T')[0]} value={values.date} onChange={(event) => update('date', event.target.value)} required /></Field>
-      <Field label="Time" id="time" required><select id="time" name="time" value={values.time} onChange={(event) => update('time', event.target.value)} required><option value="">Choose a time</option>{['19:00', '19:30', '20:00', '20:30', '21:00', '21:30', '22:00'].map((time) => <option key={time} value={time}>{time}</option>)}</select></Field>
+      <Field label="Time" id="time" required group>
+        <div className="form-chips" role="group">
+          {timeSlots.map((time) => <button key={time} type="button" className={values.time === time ? 'form-chip is-selected' : 'form-chip'} aria-pressed={values.time === time} onClick={() => update('time', values.time === time ? '' : time)}>{time}</button>)}
+        </div>
+      </Field>
       <Field label="Message" id="message" wide><textarea id="message" name="message" rows={4} value={values.message} onChange={(event) => update('message', event.target.value)} placeholder="Dietary notes, a birthday, a bottle you’d like to open…" /></Field>
     </div>
     {status === 'error' && <p className="form-error" role="alert">{error}</p>}
@@ -60,6 +73,12 @@ export function ReservationForm() {
   </form>
 }
 
-function Field({ label, id, required = false, wide = false, children }: { label: string; id: string; required?: boolean; wide?: boolean; children: ReactNode }) {
-  return <label className={`form-field ${wide ? 'form-field-wide' : ''}`} htmlFor={id}><span>{label}{required && <b aria-hidden="true">*</b>}</span>{children}</label>
+function Field({ label, id, required = false, wide = false, group = false, children }: { label: string; id: string; required?: boolean; wide?: boolean; group?: boolean; children: ReactNode }) {
+  const content = <>
+    <span id={group ? `${id}-label` : undefined}>{label}{required && <b aria-hidden="true">*</b>}</span>
+    {children}
+  </>
+  return group
+    ? <div className={`form-field ${wide ? 'form-field-wide' : ''}`} role="group" aria-labelledby={`${id}-label`}>{content}</div>
+    : <label className={`form-field ${wide ? 'form-field-wide' : ''}`} htmlFor={id}>{content}</label>
 }
