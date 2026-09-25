@@ -47,3 +47,4 @@
 - New implementation pass started: the 15 converted WebP assets will now be attached to the matching Menu data records and rendered inside the existing editorial list rows.
 - Completed the Menu image pass: mapped `/images/11.webp` through `/images/25.webp` to every dish and drink item, rendered the images as restrained editorial thumbnails, added local fallback styling for a missing asset, and kept the images protected from dragging and context-menu saving.
 - Production build passed after the Menu image placement; all 15 local WebP files exist with non-zero sizes.
+- Refined the map attribution presentation: removed the default Leaflet prefix and compressed the required OpenStreetMap credit into a small, low-contrast capsule so it no longer competes with the map composition.
