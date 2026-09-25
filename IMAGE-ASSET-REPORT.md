@@ -121,14 +121,172 @@
 
 ---
 
+## صور أطباق ومشروبات صفحة Menu
+
+هذه الأصول مخصصة لتوليد صور منفصلة لكل طبق أو مشروب في صفحة القائمة. يبدأ ترقيمها من `11.webp` لأن الصور من `01.webp` إلى `10.webp` محجوزة للمشاهد الرئيسية والتحريرية.
+
+## IMAGE 11
+
+- مكان الاستخدام: صفحة القائمة → Entrées → Huître Gillardeau, feuille de figuier
+- وصف الصورة: طبق افتتاحي راقٍ يحتوي على محارة Gillardeau واحدة أو اثنتين داخل صدفة طبيعية فوق قاعدة حجرية داكنة أو ملح رطب. يجب أن يظهر زيت ورق التين بلمعة خضراء خفيفة، مع شرائح تفاح أخضر صغيرة ونقاط من الكريمة الطازجة المدخنة. التكوين هادئ وغير مزدحم، والمحارة هي مركز الصورة مع فراغ حولها. الإضاءة جانبية ناعمة ودافئة من جهة واحدة، مع ظلال باردة وخلفية فحمية. تجنب الليمون الأصفر التقليدي، الثلج المفرط، الزخرفة البحرية الواضحة، الشعارات، النصوص، والألوان المشبعة.
+- Prompt التوليد: `Editorial fine-dining food photograph of a Gillardeau oyster in its natural shell on a dark charcoal stone plate, delicate fig-leaf oil, tiny green apple slices, small dots of smoked creme fraiche, restrained French tasting-menu composition, generous negative space, soft warm side light, cool graphite shadows, realistic wet oyster texture, muted green accents, no lemon wedge, no excessive ice, no logo, no text, no hands, premium restaurant campaign photography, 4:5 portrait, 85mm macro lens, shallow controlled depth of field.`
+- نسبة الأبعاد: 4:5
+- الدقة المقترحة: 1600×2000
+- اسم الملف: `"11.webp"`
+- المسار: `"/public/images/11.webp"`
+
+## IMAGE 12
+
+- مكان الاستخدام: صفحة القائمة → Entrées → Betterave brûlée
+- وصف الصورة: شمندر Chioggia مشوي أو محروق من الخارج ومقطع إلى قطع هندسية طبيعية، موضوع على طبق خزفي فاتح فوق خلفية داكنة. تظهر خطوط الشمندر الداخلية بوضوح، مع نقاط خل الكشمش الأسود، ملعقة صغيرة من خثارة جبن الماعز المعتق، وفتات خبز الجاودار. الإضاءة دافئة ومنخفضة لتبرز لمعان الشمندر وملمس الجبن. تجنب جعل الطبق يبدو كسلطة، وتجنب الخضروات العشوائية أو اللون الأحمر الفاقع أو التقديم المزدحم.
+- Prompt التوليد: `Premium contemporary French dish photography of charred Chioggia beetroot cut into elegant natural wedges, pale ceramic plate on a dark stone table, visible pink and white beet rings, blackcurrant vinegar dots, aged goat curd, delicate rye crumbs, restrained geometric plating, warm low candlelight, deep charcoal background, tactile roasted texture, no salad leaves, no extra vegetables, no logo, no text, no cutlery, cinematic editorial food photography, 4:5 portrait, 85mm lens.`
+- نسبة الأبعاد: 4:5
+- الدقة المقترحة: 1600×2000
+- اسم الملف: `"12.webp"`
+- المسار: `"/public/images/12.webp"`
+
+## IMAGE 13
+
+- مكان الاستخدام: صفحة القائمة → Entrées → Langoustine, safran froid
+- وصف الصورة: ذيل لانغوستين نيئ أو مطهو بخفة، مرتب بعناية فوق طبق أبيض أو رمادي فاتح، مع طبقة أو بركة رقيقة من مرق الزعفران البارد. تضاف حبيبات لقاح الشمر ولمسات صغيرة من finger lime كأنها قطرات حمضية. يجب أن تبدو الصورة منعشة، دقيقة، باردة بصريًا، مع ألوان عاجية وزعفرانية وذهبية خافتة. تجنب المبالغة في اللون الأصفر، الصلصات السميكة، المأكولات البحرية المتعددة، والديكور البحري.
+- Prompt التوليد: `Cinematic fine-dining photograph of a lightly cured langoustine tail arranged with precision on a pale stone plate, a thin pool of chilled saffron consommé, tiny fennel pollen, delicate finger lime pearls, ivory and muted saffron palette, cool clean daylight mixed with one soft warm highlight, elegant negative space, realistic translucent seafood texture, no shellfish pile, no thick sauce, no nautical props, no logo, no text, 4:5 portrait, macro editorial restaurant photography.`
+- نسبة الأبعاد: 4:5
+- الدقة المقترحة: 1600×2000
+- اسم الملف: `"13.webp"`
+- المسار: `"/public/images/13.webp"`
+
+## IMAGE 14
+
+- مكان الاستخدام: صفحة القائمة → Entrées → Pigeon en deux temps
+- وصف الصورة: طبق حمامة فرنسية مقدمة على مرحلتين بصريًا: صدر صغير وردي اللون مع قطعة فخذ مضغوطة مرتبة بجانبه، مع هريس أو شرائح سفرجل، نقاط فلفل وردي، وخط رفيع من الصلصة الصافية. يجب أن يكون الطبق داكنًا وأنيقًا مع ألوان بنية وتوتية وخشب دافئ. الإضاءة جانبية درامية لكنها تظهر نضج اللحم وملمسه. تجنب الدم الظاهر، القطع الكبيرة، مظهر الصيد الخام، العظام المبعثرة، والصلصة الثقيلة.
+- Prompt التوليد: `High-end French tasting-menu photograph of pigeon served in two preparations, a small rosy roasted breast with a neatly pressed leg portion, quince puree and quince slices, pink pepper, a clear glossy jus line, dark ceramic plate on charcoal stone, moody warm side lighting, burgundy and walnut tones, refined restrained composition, no blood, no scattered bones, no hunting props, no text, no logo, realistic food texture, 4:5 portrait, 85mm lens.`
+- نسبة الأبعاد: 4:5
+- الدقة المقترحة: 1600×2000
+- اسم الملف: `"14.webp"`
+- المسار: `"/public/images/14.webp"`
+
+## IMAGE 15
+
+- مكان الاستخدام: صفحة القائمة → Plats → Merlu de ligne, algue nori
+- وصف الصورة: قطعة سمك merlu مطهوة بلطف، سطحها أبيض لامع وحوافها ذهبية خفيفة، فوق صلصة beurre blanc بنكهة النوري. حولها رماد كراث ناعم، أعشاب بحرية خضراء، وربما ورقة نوري صغيرة موضوعة كعنصر معماري. طبق خزفي رمادي فاتح، خلفية داكنة، إضاءة جانبية باردة مع لمسة دافئة. تجنب السمك المقلي، التقديم الشعبي، الليمون، والصلصات الملونة بشدة.
+- Prompt التوليد: `Contemporary French fine-dining photograph of a line-caught hake fillet, gently cooked with a glossy pearly surface and lightly golden edges, nori beurre blanc, fine leek ash, delicate sea herbs, one restrained piece of nori, pale grey ceramic plate on dark stone, cool side light with a subtle candle warmth, minimal architectural plating, no fried fish, no lemon, no readable text, no logo, 4:5 portrait, premium editorial food photography.`
+- نسبة الأبعاد: 4:5
+- الدقة المقترحة: 1600×2000
+- اسم الملف: `"15.webp"`
+- المسار: `"/public/images/15.webp"`
+
+## IMAGE 16
+
+- مكان الاستخدام: صفحة القائمة → Plats → Canard de Challans
+- وصف الصورة: صدر بط من Challans محمر بجلد مقرمش وبداخله وردي، مقطع إلى شرائح مرتبة، بجانبه كرز مخمر داكن، لمسات من الثوم الأسود وأوراق مرة خضراء. يجب أن يكون التكوين غنيًا لكن قليل العناصر، مع طبق خزفي أسود أو رمادي وخلفية ليلية. استخدم ضوءًا دافئًا يبرز الجلد اللامع وعمق الكرز. تجنب البط المحروق، الصلصة الحمراء الكثيرة، الفواكه الزائدة، والمظهر الريفي الثقيل.
+- Prompt التوليد: `Luxury contemporary French food photograph of roasted Challans duck breast sliced into precise rosy pieces, crisp lacquered skin, fermented dark cherries, small black garlic accents, bitter green leaves, black ceramic plate, deep nocturnal charcoal background, warm directional candlelight highlighting the duck skin, refined sparse plating, no excessive sauce, no rustic clutter, no logo, no text, 4:5 portrait, 85mm lens, cinematic restaurant campaign style.`
+- نسبة الأبعاد: 4:5
+- الدقة المقترحة: 1600×2000
+- اسم الملف: `"16.webp"`
+- المسار: `"/public/images/16.webp"`
+
+## IMAGE 17
+
+- مكان الاستخدام: صفحة القائمة → Plats → Céleri-rave braisé
+- وصف الصورة: قطعة كبيرة من جذور الكرفس المطهو ببطء حتى يصبح سطحها محمرًا، موضوعة فوق كريمة قش محترق ناعمة، مع الجوز المحمص وشرائح دقيقة من الكمأة الشتوية. يجب أن يقدم الطبق كطبق فاخر مستقل لا كخضار جانبي، مع ألوان عاجية وبنية وفحمية. إضاءة ناعمة دافئة وملمس واضح للكرفس والجوز. تجنب إضافة لحم، الخضروات الملونة الكثيرة، الكمأة المبالغ فيها، أو التقديم المنزلي.
+- Prompt التوليد: `Elegant vegetarian fine-dining photograph of a slow-braised celeriac centerpiece with a lightly caramelized exterior, resting on smooth burnt hay cream, toasted walnut pieces and a few thin winter truffle shavings, pale stone plate on a dark mineral table, ivory, walnut and charcoal palette, soft warm directional light, luxurious minimal composition, no meat, no colorful garnish overload, no rustic home-style presentation, no logo, no text, 4:5 portrait.`
+- نسبة الأبعاد: 4:5
+- الدقة المقترحة: 1600×2000
+- اسم الملف: `"17.webp"`
+- المسار: `"/public/images/17.webp"`
+
+## IMAGE 18
+
+- مكان الاستخدام: صفحة القائمة → Plats → Agneau de lait, ail noir
+- وصف الصورة: قطعة لحم حمل صغير مطهوة بعناية، مقطعة إلى شرائح سميكة أو قطعة واحدة مصقولة، مع هريس أو لمسات من الثوم الأسود، أنشوجة دقيقة محفوظة، وشرائح ليمون مصير. التكوين يجب أن يكون ناضجًا وداكنًا، مع ألوان بنية وذهبية وخضراء قليلة. الإضاءة الجانبية تظهر عصارة اللحم دون أن يبدو نيئًا. تجنب العظام الكبيرة، الصلصة الكثيرة، المظهر المشوي العشوائي، والليمون الطازج الأصفر.
+- Prompt التوليد: `Moody contemporary French fine-dining photograph of milk-fed lamb, a perfectly roasted thick cut with a deep caramelized edge, black garlic puree, delicate anchovy accents, preserved lemon pieces, dark stone plate, restrained green herbs, warm side light, rich walnut and charcoal palette, precise modern plating, no large bones, no excessive sauce, no raw appearance, no fresh yellow lemon wedge, no logo, no text, 4:5 portrait.`
+- نسبة الأبعاد: 4:5
+- الدقة المقترحة: 1600×2000
+- اسم الملف: `"18.webp"`
+- المسار: `"/public/images/18.webp"`
+
+## IMAGE 19
+
+- مكان الاستخدام: صفحة القائمة → Desserts → Poire · verjus · poivre long
+- وصف الصورة: حبة كمثرى مسلوقة أو قطعة كمثرى بيضاء مصقولة، فوق جرانيتا verjus فاتحة، مع مرنغ رقيق بنكهة الفلفل الطويل. يجب أن يكون الطبق باردًا ونقيًا بصريًا، على خزف أبيض أو رمادي، مع قطرات شفافة وتفاصيل دقيقة. استخدم ضوءًا فضيًا ناعمًا مع خلفية فحمية. تجنب ألوان الحلوى الزاهية، الكريمة الثقيلة، الشوكولاتة، والزخارف المبالغ فيها.
+- Prompt التوليد: `Refined French dessert photography of a poached pear arranged with pale verjus granita and delicate long-pepper meringue, white and translucent textures, elegant pale ceramic plate on a charcoal stone table, cool silver daylight with one subtle warm highlight, minimal quiet composition, crisp frozen granita detail, no chocolate, no heavy cream, no bright artificial colors, no logo, no text, 4:5 portrait, premium editorial food photography.`
+- نسبة الأبعاد: 4:5
+- الدقة المقترحة: 1600×2000
+- اسم الملف: `"19.webp"`
+- المسار: `"/public/images/19.webp"`
+
+## IMAGE 20
+
+- مكان الاستخدام: صفحة القائمة → Desserts → Chocolat noir, huile d’olive
+- وصف الصورة: حلوى شوكولاتة داكنة 70% في شكل crémeux صغير أو كتلة ناعمة منحوتة، مع لمعان خفيف من زيت Arbequina، فتات حنطة سوداء مقرمش، وربما نقطة زيت واضحة. يجب أن تكون الصورة عميقة ومظلمة وفاخرة دون مبالغة، مع خلفية حجرية سوداء وضوء دافئ ضيق. تجنب الفراولة، الصلصات الملونة، مسحوق الكاكاو العشوائي، الكريمة المخفوقة، والنصوص.
+- Prompt التوليد: `Dark elegant French dessert photograph of a 70 percent dark chocolate cremeux, sculpted as a small smooth understated mound, Arbequina olive oil glistening in a few precise drops, buckwheat crisp scattered with restraint, matte black ceramic plate, charcoal stone background, narrow warm candlelight, deep chocolate and copper tones, no berries, no whipped cream, no colorful sauce, no logo, no readable text, 4:5 portrait, cinematic premium restaurant photography.`
+- نسبة الأبعاد: 4:5
+- الدقة المقترحة: 1600×2000
+- اسم الملف: `"20.webp"`
+- المسار: `"/public/images/20.webp"`
+
+## IMAGE 21
+
+- مكان الاستخدام: صفحة القائمة → Desserts → Millefeuille de saison
+- وصف الصورة: قطعة millefeuille واحدة بطبقات عجين مورقة واضحة، حشوة فانيلا ناعمة، حليب محمص، وقطع فاكهة موسمية قليلة. يجب أن يكون القطع هندسيًا وأنيقًا مع حواف ذهبية خفيفة، فوق طبق حجري فاتح وخلفية داكنة. الإضاءة دافئة من الجانب لتظهر الطبقات والفتات. تجنب الكريمة الزائدة، السكر البودرة الكثيف، ألوان الفاكهة الصارخة، وشكل الحلويات التجارية.
+- Prompt التوليد: `Contemporary French millefeuille dessert, one precise rectangular portion with clearly visible crisp laminated pastry layers, smooth vanilla cream, toasted milk accents and a few seasonal fruit pieces, pale stone plate against a dark charcoal background, warm side lighting revealing the flaky layers, restrained editorial luxury, no excessive cream, no heavy powdered sugar, no commercial bakery styling, no logo, no text, 4:5 portrait.`
+- نسبة الأبعاد: 4:5
+- الدقة المقترحة: 1600×2000
+- اسم الملف: `"21.webp"`
+- المسار: `"/public/images/21.webp"`
+
+## IMAGE 22
+
+- مكان الاستخدام: صفحة القائمة → Fromages → Le chariot de la cave
+- وصف الصورة: عربة جبن صغيرة أو لوح تقديم أنيق يحتوي على خمسة أنواع جبن معتقة مختلفة بوضوح في الشكل والقشرة واللون، مع سكين واحد، قطعة خبز ريفي رفيعة، ومرافقة بسيطة مثل العنب الداكن أو مربى خفيف. يجب أن تبدو الصورة كاختيار ليلي من بيت فرنسي راقٍ، بإضاءة دافئة وخلفية داكنة. تجنب ازدحام الجبن، اللوحات الريفية المبالغ فيها، المكسرات الكثيرة، الملصقات أو الكتابة.
+- Prompt التوليد: `Editorial French cheese course photograph featuring a refined small cheese trolley or dark serving board with five distinct aged cheeses, varied natural rinds and textures, one elegant cheese knife, a thin slice of country bread, minimal dark grapes and a restrained preserve, warm candlelight, dark walnut and charcoal setting, sophisticated after-hours restaurant mood, no labels, no readable text, no clutter, no oversized rustic board, 4:5 portrait.`
+- نسبة الأبعاد: 4:5
+- الدقة المقترحة: 1600×2000
+- اسم الملف: `"22.webp"`
+- المسار: `"/public/images/22.webp"`
+
+## IMAGE 23
+
+- مكان الاستخدام: صفحة القائمة → Boissons → Accord sans détour
+- وصف الصورة: أربع كؤوس صغيرة مختلفة الارتفاع تحتوي على ألوان نبيذ متدرجة، مرتبة كرحلة تذوق هادئة على طاولة حجرية داكنة. يجب أن تكون الكؤوس رفيعة ونظيفة، مع انعكاسات شمعة خافتة وخلفية سوداء غير واضحة. لا تظهر زجاجات أو ملصقات؛ التركيز على الضوء والشفافية والتدرج اللوني. تجنب جعلها صورة إعلان خمور أو إضافة نصوص وعلامات تجارية.
+- Prompt التوليد: `Premium restaurant pairing photography of four elegant tasting glasses arranged as a quiet progression on a dark mineral table, subtle variations of pale white, amber and deep red wine, thin glass stems, soft candle reflections, blurred charcoal dining room in the background, cinematic after-hours atmosphere, no bottles, no labels, no logos, no readable text, no hands, restrained editorial composition, 4:5 portrait, shallow depth of field.`
+- نسبة الأبعاد: 4:5
+- الدقة المقترحة: 1600×2000
+- اسم الملف: `"23.webp"`
+- المسار: `"/public/images/23.webp"`
+
+## IMAGE 24
+
+- مكان الاستخدام: صفحة القائمة → Boissons → Accord nocturne
+- وصف الصورة: ست كؤوس تذوق مرتبة في خط أو قوس بسيط، تبدأ بدرجات بيضاء فاتحة وتنتهي بدرجات حمراء عميقة، مع أجواء ليلية أكثر كثافة من الصورة السابقة. يجب أن ينعكس ضوء نحاسي صغير على الزجاج، مع سطح خشبي داكن وخلفية مطعم غير واضحة. لا تظهر زجاجات أو أسماء نبيذ. تجنب المظهر الاحتفالي الصاخب أو الكؤوس الممتلئة جدًا.
+- Prompt التوليد: `Moody fine-dining wine pairing photograph of six delicate tasting glasses arranged in a subtle arc, moving from pale Jura-style white wine tones to deep old-vine red, dark walnut table, one restrained oxidized copper reflection, soft candlelight, blurred nocturnal restaurant background, quiet sophisticated composition, no bottles, no labels, no logos, no readable text, no party atmosphere, no overflowing glasses, 4:5 portrait, cinematic editorial photography.`
+- نسبة الأبعاد: 4:5
+- الدقة المقترحة: 1600×2000
+- اسم الملف: `"24.webp"`
+- المسار: `"/public/images/24.webp"`
+
+## IMAGE 25
+
+- مكان الاستخدام: صفحة القائمة → Boissons → Thé fumé au pin
+- وصف الصورة: كوب خزفي صغير أو فنجان شاي داكن يحتوي على شاي دافئ بلون كهرماني خفيف، إلى جانبه أطراف صنوبر خضراء، أوراق غار، ولمسة ليمون verbena. يتصاعد بخار رقيق جدًا فوق الكوب، مع سطح حجري داكن وضوء شمعة جانبي. يجب أن تكون الصورة هادئة وعطرية بصريًا، دون تحويلها إلى مشهد غابة أو مشروب أعشاب منزلي. تجنب أكياس الشاي، السكر، الملاعق اللامعة، والكتابة.
+- Prompt التوليد: `Atmospheric French restaurant tea photograph of a small matte dark ceramic cup filled with warm amber smoked pine tea, a few fresh pine tips, bay leaf and lemon verbena arranged with restraint, an almost invisible thread of steam, dark mineral stone surface, soft side candlelight, charcoal and muted green palette, intimate after-dinner mood, no tea bag, no sugar, no shiny spoon, no forest scene, no logo, no text, 4:5 portrait, realistic premium editorial food photography.`
+- نسبة الأبعاد: 4:5
+- الدقة المقترحة: 1600×2000
+- اسم الملف: `"25.webp"`
+- المسار: `"/public/images/25.webp"`
+
+---
+
 ## ملاحظات التنفيذ
 
 - جميع المسارات المستخدمة في التطبيق تبدأ من `/images/` لأن مجلد `public/` هو جذر الملفات الثابتة في Vite. لذلك يوضع الملف فعليًا مثلًا في `public/images/01.webp` ويُستدعى داخل التطبيق من `/images/01.webp`.
-- الصورة 01 تستخدم كخلفية متحركة ببطء في القسم الافتتاحي.
+- الصورة 01 تستخدم كخلفية قسم The Night Index مع حركة تمرير sticky؛ تبقى الخلفية ثابتة أثناء مرور محتوى القسم ثم تتحرر عند نهايته.
 - الصورة 02 تستخدم كخلفية للمشهد السينمائي في الصفحة الرئيسية.
 - الصور من 03 إلى 07 تستخدم داخل شبكة المعرض.
 - الصورة 08 تستخدم في بداية صفحة من نحن.
 - الصورة 09 تستخدم في قسم اللمسة بجانب اقتباس الشيف.
 - الصورة 10 تستخدم كخلفية جوية مشتركة لعناوين صفحات القائمة ومن نحن والحجز.
+- الصور من 11 إلى 25 مخصصة لصور الأطباق والمشروبات في صفحة Menu، ويمكن ربطها لاحقًا ببطاقات العناصر أو صفحات التفاصيل حسب طريقة العرض النهائية.
+- الفيديو الافتتاحي ليس صورة، ومساره المستقل هو `public/video/noir-entry.mp4`، لذلك لا يدخل ضمن ترقيم الصور.
 - الدائرة الموجودة في قسم الاقتباس، الخطوط، الحلقات، والانتقالات البصرية عناصر CSS وليست صورًا منفصلة، لذلك لا تحتاج ملفات إضافية.
 - يفضل حفظ الملفات بصيغة WebP، من دون نصوص مدمجة داخل الصورة، ومن دون شعارات أو علامات مائية مولدة داخل الصورة.

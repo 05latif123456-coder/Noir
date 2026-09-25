@@ -5,6 +5,7 @@ export type MenuItem = {
   description: string
   price: string
   mood: Mood
+  image?: string
   note?: string
 }
 

@@ -26,6 +26,8 @@ Build and document a production-quality, original NOIR contemporary French fine-
 - [complete] Phase 18 — Move image 01 to the Night Index and prepare a silent hero video
 - [complete] Phase 19 — Add sticky scroll storytelling to the image 01 section
 - [complete] Phase 20 — Install and verify the generated NOIR hero video
+- [complete] Phase 21 — Add detailed Menu dish image prompts to the asset report
+- [complete] Phase 22 — Place numbered dish images into the Menu items
 
 ## Decisions Made
 
@@ -54,5 +56,4 @@ Build and document a production-quality, original NOIR contemporary French fine-
 
 ## Next Step
 
-No remaining implementation work for the requested hero video installation; hand off the verified build and running local server.
-Copy the supplied local tracks into predictable audio paths, add previous/next controls, then build and smoke-test audio asset delivery.
+No remaining implementation step for the supplied dish images. The production build passed after mapping and rendering all 15 local assets.

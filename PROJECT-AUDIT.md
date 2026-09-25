@@ -46,9 +46,13 @@ Added a small fixed listening playlist that persists across route changes, start
 
 The active `THE TABLE` navigation label and related controls could inherit the light theme's dark surface token while sitting over photography. Added stable `--on-image*` tokens for the header, hero, page introductions, image story, gallery captions, theme control, mobile menu toggle, and music control. Text on solid surfaces remains theme-aware, so dark/light mode now changes only the contexts where it should.
 
+### Menu asset placement
+
+The supplied numbered dish files were mixed PNG/JFIF sources and were not previously connected to the text-only menu rows. Converted them to local WebP assets `11.webp` through `25.webp`, mapped each one to its corresponding data record, and added restrained responsive thumbnails with local missing-image fallback styling. The production build passed after this change.
+
 ## Remaining production notes
 
-- Image slots are local and predictable (`/images/01.webp` through `/images/10.webp`). The generated files should be exported as licensed local AVIF/WebP assets with responsive sources and measured dimensions.
+- Image slots are local and predictable (`/images/01.webp` through `/images/25.webp`). The generated files should be exported as licensed local AVIF/WebP assets with responsive sources and measured dimensions.
 - The app intentionally uses client-side routing for a dependency-light prototype; SSR or pre-rendered routes would improve crawlability and first response in production.
 - Browser console and screen-reader testing should be run in a full browser matrix before launch; the available environment provided build and HTTP smoke-test coverage, not an automated visual browser runner.
 - No unnecessary UI, motion, or icon dependencies are present. Leaflet is isolated to the location map; the production bundle remains a single application chunk plus CSS.

@@ -20,7 +20,7 @@ The website is prepared for locally generated image assets. Follow this simple w
 3. Place them in `public/images/`.
 4. The website automatically uses each file in its mapped location.
 
-The report inventories every image-dependent visual location, including the hero, cinematic kitchen scene, gallery, About page imagery, and shared page-intro background. The current generated files are already placed in `public/images/`; if a file is missing later, the app falls back to a local CSS placeholder and never requests an external stock-image URL.
+The report inventories every image-dependent visual location, including the hero, cinematic kitchen scene, gallery, About page imagery, shared page-intro background, and dedicated food/drink image prompts for every Menu item (`11.webp` through `25.webp`). The current generated files are already placed in `public/images/`; if a file is missing later, the app falls back to a local CSS placeholder and never requests an external stock-image URL.
 
 ## Concept and art direction
 

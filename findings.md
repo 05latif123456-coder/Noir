@@ -67,3 +67,9 @@
 
 - The Night Index now separates its sticky background layer from its scrolling content layer. The `01.webp` backdrop remains pinned to the viewport while the section content passes over it, then releases naturally when the section ends.
 - The implementation uses CSS `position: sticky` rather than a continuous scroll listener, keeping the interaction lightweight and respecting reduced-motion behavior.
+
+## Menu image placement
+
+- The `Plats` folder contains exactly 15 numbered source files, `11` through `25`, with mixed PNG/JFIF extensions. They were converted to the report's required local WebP paths in `public/images/`.
+- `MenuList` previously rendered only text and price. The correct placement is a data-driven `image` field on each Menu item, mapped in order: 11–14 Entrées, 15–18 Plats, 19–21 Desserts, 22 Fromages, and 23–25 Boissons.
+- The final implementation keeps this mapping in `src/data/site.ts`, so replacing any generated file in `public/images/` updates the matching item without changing component code.

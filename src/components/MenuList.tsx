@@ -8,6 +8,7 @@ export function MenuList({ categories, compact = false }: { categories: MenuCate
       <div className="menu-items">
         {category.items.map((item, index) => <Reveal key={item.name} delay={index * 40}>
           <article className="menu-item">
+            {item.image && <img className="menu-item-image" src={item.image} alt={`${item.name} dish`} loading="lazy" draggable={false} onError={(event) => { event.currentTarget.removeAttribute('src'); event.currentTarget.classList.add('image-missing') }} onContextMenu={(event) => event.preventDefault()} />}
             <div className="menu-item-main"><h3>{item.name}</h3>{item.note && <span className="menu-item-note">{item.note}</span>}<p>{item.description}</p></div>
             <span className="menu-price">€{item.price}</span>
           </article>

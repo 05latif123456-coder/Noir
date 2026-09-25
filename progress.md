@@ -43,3 +43,7 @@
 - Production build passed; all four routes and `/images/01.webp` returned HTTP 200. The video path is intentionally not present yet and will activate automatically when the generated MP4 is placed there.
 - Added sticky scroll storytelling to the `01.webp` Night Index backdrop: the background stays visually fixed while its content moves, then releases at the section boundary without a scroll event loop. Production build passed again.
 - Copied the generated video into `public/video/noir-entry.mp4`; production build passed and the running dev server returns `/` as HTTP 200 and the video as `video/mp4` with the expected 3.8 MB size.
+- Expanded `IMAGE-ASSET-REPORT.md` with 15 detailed Menu food/drink assets (`IMAGE 11`–`IMAGE 25`), including Arabic visual descriptions, English generation prompts, aspect ratios, resolutions, filenames, and exact paths. The report now contains 25 numbered image entries with 25 filename mappings.
+- New implementation pass started: the 15 converted WebP assets will now be attached to the matching Menu data records and rendered inside the existing editorial list rows.
+- Completed the Menu image pass: mapped `/images/11.webp` through `/images/25.webp` to every dish and drink item, rendered the images as restrained editorial thumbnails, added local fallback styling for a missing asset, and kept the images protected from dragging and context-menu saving.
+- Production build passed after the Menu image placement; all 15 local WebP files exist with non-zero sizes.
