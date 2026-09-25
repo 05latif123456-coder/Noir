@@ -61,9 +61,10 @@ button:focus-visible, a:focus-visible, input:focus-visible, select:focus-visible
 .display-quote { margin: 0; max-width: 14ch; font: 400 clamp(3rem, 5.2vw, 5.7rem)/.94 var(--serif); letter-spacing: -.035em; }
 .body-copy { max-width: 27rem; color: var(--muted); font-size: .9rem; line-height: 1.9; }
 .body-copy p { margin: 0 0 1.25rem; }
-.text-button { display: inline-flex; align-items: center; gap: .7rem; padding: .4rem 0; border-bottom: 1px solid var(--copper); color: var(--bone); font: 500 .65rem var(--mono); letter-spacing: .08em; text-transform: uppercase; transition: gap .25s ease, color .25s ease; }
-.text-button:hover { gap: 1.1rem; color: var(--copper); }
-.text-button span { font-size: .9rem; }
+.text-button { display: inline-flex; align-items: center; gap: .7rem; padding: .6rem .15rem .5rem; border: 0; border-bottom: 1px solid var(--copper); background: none; color: var(--bone); font: 500 .65rem var(--mono); letter-spacing: .1em; text-transform: uppercase; transition: gap .3s cubic-bezier(.2,.75,.25,1), color .3s ease, border-color .3s ease; }
+.text-button:hover { gap: 1.05rem; color: var(--copper); }
+.text-button span { display: inline-block; font-size: .9rem; transition: transform .35s cubic-bezier(.2,.75,.25,1); }
+.text-button:hover span { transform: translateX(.2rem); }
 .opening-stamp { position: absolute; right: max(2rem, calc((100vw - 1280px) / 2)); bottom: 3.5rem; display: flex; flex-direction: column; gap: .4rem; color: var(--copper); font: .6rem var(--mono); letter-spacing: .12em; }
 .night-index { position: relative; padding: 0; background: #303936; color: var(--on-image); overflow: clip; transition: background .8s ease; }
 .night-index-sticky { position: sticky; top: 0; z-index: 0; height: 100svh; margin-bottom: -100svh; pointer-events: none; }
@@ -182,7 +183,8 @@ em { font-style: italic; }
 .chef-message .eyebrow { color: var(--copper); }
 .chef-message p { margin: 2rem auto; font: 400 clamp(2.7rem, 5vw, 5.5rem)/.9 var(--serif); letter-spacing: -.035em; }
 .chef-message-meta { display: flex; justify-content: center; gap: 1.5rem; color: var(--muted); font: .6rem var(--mono); letter-spacing: .08em; text-transform: uppercase; }
-.chef-message .text-button { margin-top: 2rem; color: var(--bone); }
+.chef-message .text-button { margin-top: 2.25rem; color: var(--bone); }
+.chef-message .text-button:hover span { transform: rotate(180deg); }
 .window-mode { background: var(--bone); color: var(--ink); }
 .window-mode-card { min-height: 38rem; max-width: 1100px; margin: 0 auto; position: relative; display: flex; align-items: end; overflow: hidden; background-color: var(--slate); background-position: center; background-size: cover; color: var(--on-image); }
 .window-mode-card::after { content: ''; position: absolute; inset: 0; background: linear-gradient(90deg, rgba(16,18,17,.18), transparent 70%); pointer-events: none; }
