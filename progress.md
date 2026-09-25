@@ -1,0 +1,45 @@
+# Progress Log
+
+## 2026-09-24
+
+- Inspected workspace: directory contains only `.freebuff`; no existing app or Git metadata.
+- Read the `frontend-design` and `planning-with-files` skills as required.
+- Attempted to inspect the supplied TA2B reference URL; browser access failed, so the brief remains the source of truth.
+- Established NOIR creative direction and architecture decisions in task_plan.md and findings.md.
+- Bootstrapped the Vite + React + TypeScript app with a typed restaurant/content model and CSS token system.
+- Built the shared shell, home, menu, about, and reservation routes.
+- Added the Night Index personal feature, responsive layout rules, reduced-motion support, semantic form states, and SEO metadata.
+- Added README.md, IMAGE-ASSET-REPORT.md, TA2B-TEST-ANSWERS.md, and PROJECT-AUDIT.md.
+- Installed dependencies and verified `npm.cmd run build` plus HTTP smoke tests for all routes and robots.txt.
+- Added repository hygiene via `.gitignore`; final production build exits 0 and all requested deliverable files exist.
+- New refinement pass started: preserve the existing NOIR direction while adding a restrained listening control and small visual polish improvements.
+- Copied the requested audio to `public/audio/sway.mp3` and added `MusicControl` with explicit user-triggered play/pause, error handling, and reduced-motion-safe animation.
+- Refined global focus states, action hover transitions, menu row interactions, overflow containment, and mobile music control sizing.
+- Final build passed; dev-server smoke tests returned HTTP 200 for `/`, `/menu`, `/about`, `/reserve`, and `/audio/sway.mp3` with `audio/mpeg` content type.
+- Added non-invasive protection against casual text selection, image dragging, and image context-menu saving while keeping reservation fields selectable.
+- Replaced every website image dependency with local `/images/01.webp` through `/images/10.webp` slots, added missing-image fallbacks, and revised IMAGE-ASSET-REPORT.md entirely in Arabic with English-only generation prompts.
+- Added the local image directory marker and documented the four-step generation workflow in README.md.
+- Final HTTP smoke test returned 200 for all four pages and both local image slot URLs; missing image slots are intentionally handled by the temporary fallback until generated files are placed in `public/images/`.
+- Converted the supplied `images/1.png` through `images/10.png` into valid `public/images/01.webp` through `public/images/10.webp` files without deleting the originals.
+- Rebuilt successfully and verified all ten local image URLs return `HTTP 200` with `image/webp` content type.
+- Removed the skip-link element as requested and added a persistent dark/light theme toggle with moon/sun SVG icons on desktop and a wider labeled pill on mobile.
+- Final build passed; `/` and `/menu` smoke tests returned HTTP 200 after starting the dev server.
+- Added the reusable Leaflet location map at the requested Paris coordinates, updated the displayed address to 14 boulevard Montmartre, and verified the homepage returns HTTP 200 with a valid local WebP asset.
+- Fixed theme contrast rules so copy over imagery stays light in both modes while copy over solid surfaces changes with the theme; removed the custom map header and caption overlays while retaining required map attribution.
+- Final build passed and `/` plus `/menu` returned HTTP 200 after restarting the live dev server.
+- New refinement pass: reviewed the supplied dark/light screenshots and identified theme token leakage into image-overlay text, especially the active `THE TABLE` navigation label. Phase 14 is now in progress to isolate stable overlay colors from theme surface colors.
+- Added stable image-overlay tokens (`--on-image*`) and moved the header, active navigation, hero, page-intro, image-story, gallery captions, theme control, mobile menu toggle, and music control to those tokens. Surface text continues to use theme-aware tokens.
+- Added a mobile-menu exception so its solid themed surface correctly controls the menu title, theme button, and close button colors when the menu is open.
+- Production build passed after the fix; `/`, `/menu`, `/about`, and `/reserve` all returned HTTP 200.
+- New map interaction pass started: the requested default-location control and mouse-wheel zoom are being added to the existing Leaflet map without changing its visual identity.
+- Added a keyboard-accessible Leaflet “Return to NOIR” control that restores the data-driven latitude, longitude, and zoom values; enabled `scrollWheelZoom` for mouse-wheel map navigation and kept control-event propagation isolated.
+- Production build passed and `/`, `/menu`, `/about`, and `/reserve` all returned HTTP 200 after the map interaction change.
+- New soundtrack pass started: found two additional supplied MP3 files beside the existing Sway track; the current implementation will expand into a three-track local playlist and remain ready for a fourth entry.
+- Copied the two supplied files into `public/audio/blue-suit-blues.mp3` and `public/audio/parisian-cafe.mp3`, moved the playlist data into `site.soundtrack`, and added previous/next controls while preserving explicit user-triggered playback.
+- Production build passed; all four routes and all three local audio URLs returned HTTP 200 with `audio/mpeg` responses.
+- Playback-state refinement: corrected track switching to use the actual media element state, keep the new track paused when the previous track was paused, and continue playback only when the previous track was playing. Production build and local audio smoke checks passed again.
+- New visual direction pass started: reviewed the supplied screenshot and Qissa reference; the Night Index will receive `01.webp` as its background, while the hero is prepared for a local silent video at `/video/noir-entry.mp4` with a local fallback.
+- Moved `01.webp` from the hero background to the Night Index backdrop, added the muted loopable `/video/noir-entry.mp4` slot with `/images/10.webp` fallback, and added the generation prompt to README.md and `public/video/README.md`.
+- Production build passed; all four routes and `/images/01.webp` returned HTTP 200. The video path is intentionally not present yet and will activate automatically when the generated MP4 is placed there.
+- Added sticky scroll storytelling to the `01.webp` Night Index backdrop: the background stays visually fixed while its content moves, then releases at the section boundary without a scroll event loop. Production build passed again.
+- Copied the generated video into `public/video/noir-entry.mp4`; production build passed and the running dev server returns `/` as HTTP 200 and the video as `video/mp4` with the expected 3.8 MB size.
