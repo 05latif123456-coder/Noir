@@ -201,6 +201,7 @@ em { font-style: italic; }
 .window-mode-overlay-copy p { max-width: 18rem; color: var(--on-image-soft); font-size: .8rem; line-height: 1.8; }
 .candle-cursor { display: none; position: fixed; z-index: 100; width: 3.5rem; height: 3.5rem; pointer-events: none; border-radius: 50%; opacity: 0; transform: translate(-50%, -50%); background: radial-gradient(circle, rgba(216,201,176,.46) 0, rgba(180,106,77,.18) 24%, transparent 70%); mix-blend-mode: screen; transition: opacity .2s ease; }
 .candle-cursor.is-visible { opacity: 1; }
+.candle-cursor.is-inverted { background: radial-gradient(circle, rgba(23,27,25,.55) 0, rgba(23,27,25,.32) 26%, transparent 68%); mix-blend-mode: multiply; }
 .page-transition, .exit-overlay { position: fixed; z-index: 90; inset: 0; display: grid; place-content: center; justify-items: center; gap: 1.3rem; background: var(--ink); color: var(--bone); animation: fade-in .18s ease both; }
 .page-transition-mark { font: 400 clamp(4rem, 11vw, 9rem)/.7 var(--serif); letter-spacing: -.06em; }
 .page-transition-mark span { color: var(--copper); }

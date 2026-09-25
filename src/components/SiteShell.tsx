@@ -3,6 +3,7 @@ import { site } from '../data/site'
 import { ArrowUpRight, CloseIcon, MenuIcon } from './Icons'
 import { MusicControl } from './MusicControl'
 import { ThemeToggle } from './ThemeToggle'
+import { CandleCursor } from './CandleCursor'
 
 function PageTransition({ path }: { path: string }) {
   const previousPath = useRef(path)
@@ -43,6 +44,7 @@ export function SiteShell({ children, path }: { children: ReactNode; path: strin
   }
 
   return <div className="app-shell">
+    <CandleCursor />
     <header className={`site-header ${open ? 'is-open' : ''}`}>
       <a className="wordmark" href="/" onClick={(event) => { event.preventDefault(); navigate('/') }} aria-label="NOIR home">NOIR<span className="wordmark-dot">.</span></a>
       <nav className="desktop-nav" aria-label="Primary navigation">

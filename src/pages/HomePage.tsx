@@ -4,7 +4,6 @@ import type { Mood } from '../types'
 import { ArrowDown, ArrowUpRight } from '../components/Icons'
 import { Reveal } from '../components/Reveal'
 import { LocationMap } from '../components/LocationMap'
-import { CandleCursor } from '../components/CandleCursor'
 import { ChefMessage } from '../components/ChefMessage'
 import { MarketMemory } from '../components/MarketMemory'
 import { Table09 } from '../components/Table09'
@@ -20,7 +19,6 @@ export function HomePage({ navigate }: { navigate: (href: string) => void }) {
   const [mood, setMood] = useState<Mood>('ember')
   const selected = moods[mood]
   return <>
-    <CandleCursor />
     <section className="hero" aria-labelledby="hero-title" data-candle-zone>
       <div className="hero-image" role="img" aria-label="Atmospheric fallback image for the NOIR opening" />
       <video className="hero-video" autoPlay muted loop playsInline preload="metadata" aria-hidden="true" onError={(event) => { event.currentTarget.style.display = 'none' }}>
