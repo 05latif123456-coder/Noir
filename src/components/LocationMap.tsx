@@ -1,5 +1,5 @@
 import { useEffect } from 'react'
-import { AttributionControl, MapContainer, Marker, Popup, TileLayer, ZoomControl, useMap } from 'react-leaflet'
+import { MapContainer, Marker, Popup, TileLayer, ZoomControl, useMap } from 'react-leaflet'
 import L from 'leaflet'
 import 'leaflet/dist/leaflet.css'
 import { site } from '../data/site'
@@ -50,7 +50,6 @@ export function LocationMap() {
   return <div className="location-map-shell">
     <MapContainer center={position} zoom={site.map.zoom} scrollWheelZoom={true} zoomControl={false} attributionControl={false} className="location-map" aria-label="Map showing the NOIR restaurant location">
       <TileLayer attribution="&copy; OpenStreetMap contributors" url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png" />
-      <AttributionControl position="bottomright" prefix={false} />
       <DefaultLocationControl position={position} zoom={site.map.zoom} />
       <ZoomControl position="topright" />
       <Marker position={position} icon={noirPin}>
