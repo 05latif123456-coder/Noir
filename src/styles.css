@@ -90,7 +90,11 @@ button:focus-visible, a:focus-visible, input:focus-visible, select:focus-visible
 .mood-detail { color: var(--copper); font: .62rem var(--mono); letter-spacing: .1em; text-transform: uppercase; }
 .mood-copy p { color: var(--on-image); font: 400 1.8rem/1.1 var(--serif); }
 .mood-dishes { border-top: 1px solid var(--on-image-line); }
-.mood-dishes article { display: grid; grid-template-columns: 1fr 1.25fr auto; gap: 1rem; align-items: baseline; padding: 1.35rem 0; border-bottom: 1px solid var(--on-image-line); }
+.mood-dishes article { display: grid; grid-template-columns: 4.2rem 5rem 1fr auto; gap: 1rem; align-items: center; padding: 1.35rem 0; border-bottom: 1px solid var(--on-image-line); }
+.home-dish-image { display: block; object-fit: cover; filter: saturate(.68) contrast(1.04); transition: transform .55s cubic-bezier(.2,.75,.25,1), filter .4s ease; }
+.home-dish-image.image-missing { background: linear-gradient(135deg, #303936, #171b19 58%, #b46a4d); }
+.mood-dishes .home-dish-image { width: 4.2rem; height: 3.6rem; }
+.mood-dishes article:hover .home-dish-image, .featured-item:hover .home-dish-image { transform: scale(1.05); filter: saturate(1) contrast(1.02); }
 .mood-dishes article span, .mood-dishes article b { font: 400 1.1rem var(--serif); }
 .mood-dishes article small { color: var(--on-image-soft); font-size: .7rem; line-height: 1.5; }
 .mood-dishes article b { font-size: .85rem; color: var(--candle); font-weight: 400; }
@@ -104,7 +108,9 @@ em { font-style: italic; }
 .copper-button:hover { background: var(--bone); color: var(--ink); }
 .outlined-button .icon { width: .8rem; }
 .featured-menu { max-width: 1100px; margin: 0 auto; border-top: 1px solid rgba(16,18,17,.22); }
-.featured-item { display: grid; grid-template-columns: 4rem 1fr auto; gap: 1rem; align-items: center; padding: 2rem 0; border-bottom: 1px solid rgba(16,18,17,.22); }
+.featured-item { display: grid; grid-template-columns: 4rem 5.2rem minmax(0, 1fr) auto; gap: 1rem; align-items: center; padding: 2rem 0; border-bottom: 1px solid rgba(16,18,17,.22); }
+.featured-item > div { min-width: 0; }
+.featured-dish-image { width: 5.2rem; height: 4rem; }
 .featured-number { font: .65rem var(--mono); color: var(--copper); }
 .featured-item h3 { margin: 0 0 .4rem; font: 400 2.2rem var(--serif); }
 .featured-item p { margin: 0; color: #65706a; font-size: .75rem; }
@@ -329,12 +335,14 @@ body[data-theme='light'] .visit-section, body[data-theme='light'] .about-pullquo
   .mood-switcher { margin: 4rem 0 3.5rem; display: flex; flex-direction: column; }
   .mood-switcher button, .mood-switcher button + button { padding: 1rem 0; padding-left: 0; }
   .night-index-content { gap: 3.5rem; }
-  .mood-dishes article { grid-template-columns: 1fr auto; }
-  .mood-dishes article small { grid-column: 1 / -1; grid-row: 2; margin-top: -.7rem; }
+  .mood-dishes article { grid-template-columns: 3.6rem minmax(0, 1fr) auto; gap: .75rem; }
+  .mood-dishes .home-dish-image { width: 3.6rem; height: 3.4rem; grid-row: 1 / span 2; }
+  .mood-dishes article small { grid-column: 2; grid-row: 2; margin-top: 0; }
   .section-heading-row { align-items: start; flex-direction: column; margin-bottom: 3.5rem; }
   .section-heading-row h2, .night-index h2, .visit-grid h2 { font-size: 3.8rem; }
   .outlined-button { margin-top: 1rem; }
-  .featured-item { grid-template-columns: 2rem 1fr auto; }
+  .featured-item { grid-template-columns: 2rem 3.6rem minmax(0, 1fr) auto; gap: .75rem; }
+  .featured-dish-image { width: 3.6rem; height: 3.35rem; }
   .featured-item h3 { font-size: 1.7rem; }
   .featured-item p { line-height: 1.4; }
   .image-story { height: 80svh; min-height: 30rem; }

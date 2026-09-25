@@ -48,3 +48,6 @@
 - Completed the Menu image pass: mapped `/images/11.webp` through `/images/25.webp` to every dish and drink item, rendered the images as restrained editorial thumbnails, added local fallback styling for a missing asset, and kept the images protected from dragging and context-menu saving.
 - Production build passed after the Menu image placement; all 15 local WebP files exist with non-zero sizes.
 - Refined the map attribution presentation: removed the default Leaflet prefix and compressed the required OpenStreetMap credit into a small, low-contrast capsule so it no longer competes with the map composition.
+- New Home image pass started: identified that both the featured menu and Night Index on the homepage were still text-only despite the shared menu data already carrying local image paths.
+- Added a shared `HomeDishImage` renderer to HomePage: the featured Plats rows now show images 15–17, and Night Index suggestions show the matching image for every mood-filtered dish. The treatment preserves the editorial rows, includes lazy loading, local missing-image fallback, and image copy deterrents.
+- Production build passed and `/` plus the sampled local dish assets returned HTTP 200 with `image/webp` content types.

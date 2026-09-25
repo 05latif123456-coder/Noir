@@ -50,6 +50,10 @@ The active `THE TABLE` navigation label and related controls could inherit the l
 
 The supplied numbered dish files were mixed PNG/JFIF sources and were not previously connected to the text-only menu rows. Converted them to local WebP assets `11.webp` through `25.webp`, mapped each one to its corresponding data record, and added restrained responsive thumbnails with local missing-image fallback styling. The production build passed after this change.
 
+### Homepage dish imagery
+
+The homepage reused the menu data but rendered its featured dishes and Night Index suggestions as text-only rows. Connected both views to the existing local image paths through one small renderer, using compact editorial crops on desktop and touch-friendly crops on mobile. Verified the production build and sampled Home image delivery after the change.
+
 ## Remaining production notes
 
 - Image slots are local and predictable (`/images/01.webp` through `/images/25.webp`). The generated files should be exported as licensed local AVIF/WebP assets with responsive sources and measured dimensions.

@@ -40,6 +40,8 @@ Create a silent 8–10 second cinematic opening video for NOIR, a fictional cont
 
 The Night Index is a three-state sensory menu explorer: Ember, Mineral, and Nocturne. Each state changes the menu suggestions and the temperature of the section. It gives guests a way to browse by feeling — a natural behavior for a restaurant built around atmosphere — while remaining useful and lightweight.
 
+The first-page design direction is documented in [`NOIR-HOME-DESIGN-REPORT.md`](./NOIR-HOME-DESIGN-REPORT.md). It describes the Home experience only: the cinematic hero, editorial composition, Night Index, motion language, responsive behavior, and the intended visual rules for carrying the direction into another project.
+
 The site also includes an opt-in soundtrack playlist fixed to the lower-left corner. It never autoplays: visitors choose whether to play or pause the local tracks in `public/audio/`, and can move backward or forward with the adjacent controls. The current playlist contains `sway.mp3`, `blue-suit-blues.mp3`, and `parisian-cafe.mp3`; add a fourth track by appending one data object to `site.soundtrack` in `src/data/site.ts`.
 
 The header also includes a persistent dark/light mode toggle. Desktop uses a moon/sun icon; mobile expands the control into a labeled pill. The preference is saved locally in the browser.

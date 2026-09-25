@@ -5,6 +5,11 @@ import { ArrowDown, ArrowUpRight } from '../components/Icons'
 import { Reveal } from '../components/Reveal'
 import { LocationMap } from '../components/LocationMap'
 
+function HomeDishImage({ src, name, className = '' }: { src?: string; name: string; className?: string }) {
+  if (!src) return null
+  return <img className={`home-dish-image ${className}`} src={src} alt={`${name} dish`} loading="lazy" draggable={false} onError={(event) => { event.currentTarget.removeAttribute('src'); event.currentTarget.classList.add('image-missing') }} onContextMenu={(event) => event.preventDefault()} />
+}
+
 export function HomePage({ navigate }: { navigate: (href: string) => void }) {
   const [mood, setMood] = useState<Mood>('ember')
   const selected = moods[mood]
@@ -41,14 +46,14 @@ export function HomePage({ navigate }: { navigate: (href: string) => void }) {
         <div className="mood-switcher" role="tablist" aria-label="Choose an atmosphere">
           {(Object.keys(moods) as Mood[]).map((key) => <button key={key} className={mood === key ? 'selected' : ''} role="tab" aria-selected={mood === key} onClick={() => setMood(key)}><span>0{Object.keys(moods).indexOf(key) + 1}</span>{moods[key].label}<i /></button>)}
         </div>
-        <div className="night-index-content"><div className="mood-copy"><span className="mood-detail">{selected.detail}</span><p>{selected.description}</p><a className="text-button" href="/menu" onClick={(event) => { event.preventDefault(); navigate('/menu') }}>Read the full menu <span>↗</span></a></div><div className="mood-dishes">{moodItems(mood).map((item) => <article key={item.name}><span>{item.name}</span><small>{item.description}</small><b>€{item.price}</b></article>)}</div></div>
+        <div className="night-index-content"><div className="mood-copy"><span className="mood-detail">{selected.detail}</span><p>{selected.description}</p><a className="text-button" href="/menu" onClick={(event) => { event.preventDefault(); navigate('/menu') }}>Read the full menu <span>↗</span></a></div><div className="mood-dishes">{moodItems(mood).map((item) => <article key={item.name}><HomeDishImage src={item.image} name={item.name} /><span>{item.name}</span><small>{item.description}</small><b>€{item.price}</b></article>)}</div></div>
       </div>
     </section>
 
     <section className="menu-preview section-pad">
       <div className="section-index">03 <span /></div>
       <div className="section-heading-row"><div><span className="eyebrow">From the kitchen</span><h2>Small gestures.<br /><em>Long memory.</em></h2></div><a className="outlined-button" href="/menu" onClick={(event) => { event.preventDefault(); navigate('/menu') }}>View the menu <ArrowUpRight /></a></div>
-      <div className="featured-menu">{menuCategories[1].items.slice(0, 3).map((item, index) => <Reveal key={item.name} delay={index * 80}><article className="featured-item"><span className="featured-number">0{index + 1}</span><div><h3>{item.name}</h3><p>{item.description}</p></div><span className="menu-price">€{item.price}</span></article></Reveal>)}</div>
+      <div className="featured-menu">{menuCategories[1].items.slice(0, 3).map((item, index) => <Reveal key={item.name} delay={index * 80}><article className="featured-item"><span className="featured-number">0{index + 1}</span><HomeDishImage src={item.image} name={item.name} className="featured-dish-image" /><div><h3>{item.name}</h3><p>{item.description}</p></div><span className="menu-price">€{item.price}</span></article></Reveal>)}</div>
     </section>
 
     <section className="image-story">

@@ -73,3 +73,9 @@
 - The `Plats` folder contains exactly 15 numbered source files, `11` through `25`, with mixed PNG/JFIF extensions. They were converted to the report's required local WebP paths in `public/images/`.
 - `MenuList` previously rendered only text and price. The correct placement is a data-driven `image` field on each Menu item, mapped in order: 11–14 Entrées, 15–18 Plats, 19–21 Desserts, 22 Fromages, and 23–25 Boissons.
 - The final implementation keeps this mapping in `src/data/site.ts`, so replacing any generated file in `public/images/` updates the matching item without changing component code.
+
+## Home dish imagery review
+
+- `HomePage.tsx` already receives menu records containing `image` paths, but the `featured-menu` section rendered only the item number, name, description, and price.
+- The Night Index also rendered its mood-filtered dishes as text-only rows, even though the filtered `MenuItem` records already carry the matching local image paths.
+- The Home fix should reuse those data-driven paths in both moments: compact editorial thumbnails in the featured menu and restrained thumbnails in the atmosphere suggestions. No new assets or duplicate image mapping is needed.
