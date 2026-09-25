@@ -162,11 +162,14 @@ em { font-style: italic; }
 .table-09 h2 { margin: 1rem 0 1.5rem; font: 400 clamp(4.5rem, 9vw, 9rem)/.7 var(--serif); letter-spacing: -.05em; }
 .table-09-intro { max-width: 16rem; margin: 0; color: #69716b; font: .85rem/1.8 var(--mono); }
 .table-09-experience { display: grid; grid-template-columns: 1fr .9fr; gap: 2.5rem; align-items: center; }
-.table-09-map { position: relative; min-height: 24rem; overflow: hidden; isolation: isolate; border: 1px solid rgba(23,27,25,.5); border-radius: 1.25rem; box-shadow: inset 0 0 0 1px rgba(233,228,218,.24), 0 .9rem 2.2rem rgba(16,18,17,.08); background: radial-gradient(circle at 18% 22%, rgba(180,106,77,.38) 0 1.5rem, transparent 1.6rem), radial-gradient(circle at 77% 30%, rgba(180,106,77,.28) 0 1.6rem, transparent 1.7rem), linear-gradient(140deg, rgba(48,57,54,.2), transparent 44%), #c5beb2; }
+.table-09-map { position: relative; min-height: 24rem; overflow: hidden; isolation: isolate; border: 1px solid rgba(23,27,25,.5); border-radius: 1.25rem; box-shadow: inset 0 0 0 1px rgba(233,228,218,.24), 0 .9rem 2.2rem rgba(16,18,17,.08); background: radial-gradient(circle at 16% 27%, rgba(146,80,57,.2) 0 1.35rem, transparent 1.5rem), radial-gradient(circle at 79% 35%, rgba(146,80,57,.16) 0 1.45rem, transparent 1.6rem), linear-gradient(140deg, rgba(48,57,54,.2), transparent 44%), #c5beb2; }
 .table-09-map::before, .table-09-map::after { content: ''; position: absolute; pointer-events: none; border: 1px solid rgba(23,27,25,.42); }
 .table-09-map::before { inset: 12% 16%; border-left: 0; border-right: 0; }
 .table-09-map::after { inset: 26% 8%; border-top: 0; border-bottom: 0; }
-.table-09-map button { position: absolute; z-index: 1; display: grid; place-items: center; width: 3.2rem; height: 3.2rem; appearance: none; border: 1px solid rgba(23,27,25,.62); border-radius: .9rem; background: rgba(243,239,231,.86); box-shadow: 0 .45rem 1rem rgba(16,18,17,.12); color: #171b19; font: .7rem var(--mono); transition: transform .3s ease, border-color .3s ease, background .3s ease, color .3s ease, box-shadow .3s ease; }
+.table-09-map button { position: absolute; z-index: 1; display: grid; place-items: center; width: 3.4rem; height: 3.4rem; appearance: none; border: 1px solid rgba(23,27,25,.45); border-radius: 50%; background: rgba(243,239,231,.8); backdrop-filter: blur(4px); -webkit-backdrop-filter: blur(4px); box-shadow: 0 .45rem 1rem rgba(16,18,17,.14), inset 0 0 0 1px rgba(233,228,218,.55); color: #171b19; font: .72rem var(--mono); letter-spacing: .06em; touch-action: manipulation; transition: transform .3s cubic-bezier(.2,.75,.25,1), border-color .3s ease, background .3s ease, color .3s ease, box-shadow .3s ease; }
+.table-09-map button:hover { border-color: rgba(146,80,57,.6); background: rgba(243,239,231,.96); transform: translateY(-2px); box-shadow: 0 .7rem 1.4rem rgba(16,18,17,.18); }
+.table-09-map button.selected { border-color: #925039; background: #925039; color: #f6efe5; transform: translateY(-2px) scale(1.06); box-shadow: 0 .7rem 1.5rem rgba(146,80,57,.35), inset 0 0 0 1px rgba(246,239,229,.3); }
+.table-09-map button:active { transform: scale(.94); }
 .table-09-map button:nth-of-type(1) { left: 13%; top: 13%; }
 .table-09-map button:nth-of-type(2) { right: 13%; top: 22%; }
 .table-09-map button:nth-of-type(3) { left: 22%; bottom: 16%; }
@@ -508,10 +511,10 @@ body[data-theme='light'] .form-field textarea { border-bottom-color: rgba(233,22
   .market-memory-grid { grid-template-columns: 1fr; gap: .75rem; }
   .market-memory-step-1, .market-memory-step-4 { grid-column: auto; }
   .market-memory-image, .market-memory-step-1 .market-memory-image, .market-memory-step-4 .market-memory-image { height: 18rem; }
-  .table-09-layout { gap: 3rem; }
-  .table-09-experience { grid-template-columns: 1fr; gap: 1.75rem; }
-  .table-09-map { width: min(100%, 21rem); min-height: 0; aspect-ratio: 1.08; margin-inline: auto; border-radius: 1rem; }
-  .table-09-map button { width: 2.65rem; height: 2.65rem; border-radius: .75rem; font-size: .62rem; }
+  .table-09-layout { grid-template-columns: 1fr; gap: 3.5rem; }
+  .table-09-experience { grid-template-columns: 1fr; gap: 2.25rem; }
+  .table-09-map { width: min(100%, 22rem); min-height: 0; aspect-ratio: .92; margin-inline: auto; border-radius: 1.1rem; }
+  .table-09-map button { width: 2.95rem; height: 2.95rem; font-size: .66rem; }
   .table-09-map button:nth-of-type(1) { left: 11%; top: 11%; }
   .table-09-map button:nth-of-type(2) { right: 11%; top: 20%; }
   .table-09-map button:nth-of-type(3) { left: 20%; bottom: 13%; }
